@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>Daftar Akun - Toko Swalayan K2M</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Header / Top Navigation -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-10 py-4 bg-white dark:bg-background-dark">
+                <div class="flex items-center gap-4 cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="text-primary">
+                        <span class="material-symbols-outlined text-4xl">storefront</span>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Toko
+                        Swalayan K2M</h2>
+                </div>
+                <a class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100"
+                    href="javascript:history.back()">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </a>
+            </header>
+            <main class="flex-1 flex justify-center py-8 px-4">
+                <div class="layout-content-container flex flex-col max-w-[480px] w-full gap-6">
+                    <!-- Hero Image / Brand Banner -->
+                    <div class="@container">
+                        <div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl min-h-[180px] border border-slate-200 dark:border-slate-800"
+                            data-alt="Interior of a modern clean grocery store aisle"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChxmRLYmHx14C0R22Vtg2aqB7ab6_7gnvMRDkYZzpomzwPVxYyCkKgxCQC7ANVjbQLqGeJMdN8xnDB0hhPTegAiP7WZWtwf6o9v5PmrlfHSmOdDnVeBj51FrwyWEaneDS9TrmZxSVJipPyJsH7bKC-PFnOwU6CMjzvdt9e1Quqxd4jBqqHd2x52oSi1roxg-JIttsjh0VVAs06-V90RPE_EBpRxqJE6lcF0SvsxPQrfQ54OfQCciLNeragAz-FR3fP8FeM5ZckcfA");'>
+                        </div>
+                    </div>
+                    <!-- Welcome Text -->
+                    <div class="flex flex-col gap-2">
+                        <h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">Daftar Akun Baru
+                        </h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm font-normal">Lengkapi data diri Anda untuk
+                            mulai belanja kebutuhan harian</p>
+                    </div>
+                    <!-- Registration Form -->
+                    <form class="flex flex-col gap-4"
+                        onsubmit="event.preventDefault(); window.location.href='login.html';">
+                        <!-- Full Name -->
+                        <label class="flex flex-col gap-2">
+                            <span class="text-slate-900 dark:text-slate-100 text-sm font-medium leading-normal">Nama
+                                Lengkap</span>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">person</span>
+                                <input
+                                    class="form-input flex w-full rounded-lg border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-12 pl-10 pr-4 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary"
+                                    placeholder="Masukkan nama lengkap Anda" required="" type="text" />
+                            </div>
+                        </label>
+                        <!-- Email -->
+                        <label class="flex flex-col gap-2">
+                            <span
+                                class="text-slate-900 dark:text-slate-100 text-sm font-medium leading-normal">Email</span>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">mail</span>
+                                <input
+                                    class="form-input flex w-full rounded-lg border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-12 pl-10 pr-4 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary"
+                                    placeholder="contoh@email.com" required="" type="email" />
+                            </div>
+                        </label>
+                        <!-- Phone Number -->
+                        <label class="flex flex-col gap-2">
+                            <span class="text-slate-900 dark:text-slate-100 text-sm font-medium leading-normal">Nomor
+                                Telepon</span>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">call</span>
+                                <input
+                                    class="form-input flex w-full rounded-lg border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-12 pl-10 pr-4 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary"
+                                    placeholder="08123456xxx" required="" type="tel" />
+                            </div>
+                        </label>
+                        <!-- Password -->
+                        <label class="flex flex-col gap-2">
+                            <span class="text-slate-900 dark:text-slate-100 text-sm font-medium leading-normal">Kata
+                                Sandi</span>
+                            <div class="relative">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">lock</span>
+                                <input
+                                    class="form-input flex w-full rounded-lg border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-12 pl-10 pr-12 text-slate-900 dark:text-slate-100 focus:ring-primary focus:border-primary"
+                                    placeholder="Minimal 8 karakter" required="" type="password" />
+                                <button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400" type="button">
+                                    <span class="material-symbols-outlined">visibility</span>
+                                </button>
+                            </div>
+                        </label>
+                        <!-- Terms and Conditions -->
+                        <label class="flex items-start gap-3 py-2 cursor-pointer">
+                            <input
+                                class="mt-1 h-5 w-5 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary bg-white dark:bg-slate-900"
+                                required="" type="checkbox" />
+                            <span class="text-sm text-slate-600 dark:text-slate-400 leading-snug">
+                                Saya setuju dengan <a class="text-primary hover:underline" href="#">Syarat &amp;
+                                    Ketentuan</a> serta <a class="text-primary hover:underline" href="#">Kebijakan
+                                    Privasi</a> Toko Swalayan K2M.
+                            </span>
+                        </label>
+                        <!-- Register Button -->
+                        <button
+                            class="flex w-full items-center justify-center rounded-lg h-12 bg-primary text-white font-bold text-base shadow-sm hover:bg-primary/90 transition-colors mt-2"
+                            type="submit">
+                            Daftar Sekarang
+                        </button>
+                    </form>
+                    <!-- Login Link -->
+                    <div
+                        class="flex flex-col items-center gap-4 py-4 border-t border-slate-100 dark:border-slate-800 mt-4">
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">Sudah punya akun?</p>
+                        <a class="flex w-full items-center justify-center rounded-lg h-12 border border-primary text-primary font-bold text-base hover:bg-primary/5 transition-colors"
+                            href="login.html">
+                            Masuk ke Akun
+                        </a>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer Footer -->
+            <footer class="p-6 text-center">
+                <p class="text-slate-400 dark:text-slate-600 text-xs">© 2024 Toko Swalayan K2M. Semua hak dilindungi.
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Toko Swalayan K2M - Belanja Lengkap &amp; Hemat di Kerinci</title>
+    <meta name="description"
+        content="K2M Swalayan - Toko kebutuhan harian terpercaya di Tangkil, Kerinci. Produk lengkap, harga bersaing, melayani grosir dan eceran sejak tahun 2000." />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "primary-dark": "#1a6fc4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(15, 23, 42, 0.97) 35%, rgba(15, 23, 42, 0.6) 70%, rgba(15, 23, 42, 0.2) 100%), url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(43, 140, 238, 0.15);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f6f7f8] text-slate-900">
+
+    <!-- ========= HEADER ========= -->
+    <header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+            <!-- Brand -->
+            <a href="index.html" class="flex items-center gap-2 no-underline">
+                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-md">
+                    <span class="material-symbols-outlined text-[22px]">storefront</span>
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="text-base font-black tracking-tight text-slate-900">K2M SWALAYAN</span>
+                    <span class="text-[10px] font-semibold uppercase tracking-widest text-primary">Putra Gunung
+                        Group</span>
+                </div>
+            </a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-7">
+                <a href="index.html" class="text-sm font-bold text-primary border-b-2 border-primary pb-0.5">Beranda</a>
+                <a href="tentang.html"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Tentang</a>
+                <a href="produk.html"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Produk</a>
+                <a href="fasilitas.html"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Fasilitas</a>
+                <a href="kontak.html"
+                    class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors">Kontak</a>
+            </nav>
+            <!-- CTA Buttons -->
+            <div class="flex items-center gap-3">
+                <a href="login.html"
+                    class="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-slate-600 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">person</span> Masuk
+                </a>
+                <a href="https://wa.me/6285695941147" target="_blank"
+                    class="flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-sm font-bold text-white hover:opacity-90 transition-all shadow-md">
+                    <span class="material-symbols-outlined text-[18px]">chat</span>
+                    <span class="hidden sm:inline">Hubungi Kami</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========= HERO ========= -->
+        <section class="hero-bg min-h-[560px] flex items-center px-6 py-16 lg:py-24" id="beranda">
+            <div class="mx-auto max-w-7xl w-full">
+                <div class="max-w-2xl">
+                    <span
+                        class="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
+                        <span class="material-symbols-outlined text-[14px]">location_on</span> Tangkil, Kerinci, Jambi
+                    </span>
+                    <h1 class="mb-5 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
+                        Toko Swalayan <span class="text-primary">K2M</span><br />
+                        <span class="text-3xl md:text-4xl font-bold text-slate-300">Harga Eceran Rasa Grosir</span>
+                    </h1>
+                    <p class="mb-8 text-base font-medium text-slate-300 leading-relaxed md:text-lg max-w-lg">
+                        Belanja Lengkap, Harga Hemat, Pelayanan Dekat di Hati. Hadir untuk memenuhi kebutuhan masyarakat
+                        Tangkil dan sekitarnya sejak tahun 2000.
+                    </p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="produk.html"
+                            class="rounded-xl bg-primary px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-primary/30 hover:bg-primary-dark transition-all hover:-translate-y-0.5">
+                            Lihat Produk Kami
+                        </a>
+                        <a href="kontak.html"
+                            class="rounded-xl border border-white/30 bg-white/10 backdrop-blur px-7 py-3.5 text-base font-bold text-white hover:bg-white/20 transition-all">
+                            Lokasi &amp; Kontak
+                        </a>
+                    </div>
+                    <!-- Social proof -->
+                    <div class="mt-10 flex items-center gap-4">
+                        <div class="flex -space-x-2.5">
+                            <div
+                                class="h-9 w-9 rounded-full border-2 border-slate-800 bg-green-400 flex items-center justify-center text-xs font-black text-green-900">
+                                A</div>
+                            <div
+                                class="h-9 w-9 rounded-full border-2 border-slate-800 bg-blue-400 flex items-center justify-center text-xs font-black text-blue-900">
+                                B</div>
+                            <div
+                                class="h-9 w-9 rounded-full border-2 border-slate-800 bg-yellow-400 flex items-center justify-center text-xs font-black text-yellow-900">
+                                C</div>
+                            <div
+                                class="h-9 w-9 rounded-full border-2 border-slate-800 bg-slate-600 flex items-center justify-center text-xs font-medium text-white">
+                                +</div>
+                        </div>
+                        <span class="text-sm font-medium text-slate-400">Dipercaya ribuan warga Kerinci &amp;
+                            sekitarnya</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= VALUE PROPOSITION STRIP ========= -->
+        <section class="bg-primary text-white py-10 px-6">
+            <div class="mx-auto max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl">inventory_2</span>
+                    <p class="font-bold text-sm">Stok Selalu Ada</p>
+                    <p class="text-xs opacity-70">Ketersediaan terjamin setiap hari</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl">sell</span>
+                    <p class="font-bold text-sm">Harga Bersaing</p>
+                    <p class="text-xs opacity-70">Layani Grosir &amp; Eceran terbaik</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl">location_on</span>
+                    <p class="font-bold text-sm">Lokasi Strategis</p>
+                    <p class="text-xs opacity-70">Jalur utama Kerinci</p>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl">qr_code_2</span>
+                    <p class="font-bold text-sm">Bayar Mudah</p>
+                    <p class="text-xs opacity-70">Cash, Transfer &amp; QRIS</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= ABOUT US ========= -->
+        <section class="bg-white py-20 px-6" id="tentang">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+                    <!-- Image block -->
+                    <div class="relative">
+                        <div class="aspect-square overflow-hidden rounded-2xl shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&q=80"
+                                alt="Suasana toko swalayan modern dengan rak-rak produk lengkap"
+                                class="h-full w-full object-cover" />
+                        </div>
+                        <!-- Float badge -->
+                        <div
+                            class="absolute -bottom-5 -right-5 rounded-2xl bg-primary p-5 text-white shadow-xl shadow-primary/40">
+                            <p class="text-3xl font-black leading-none">24+</p>
+                            <p class="text-[11px] font-bold uppercase tracking-widest opacity-90 mt-1">Tahun Melayani
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="flex flex-col gap-6">
+                        <div>
+                            <p class="text-sm font-bold uppercase tracking-widest text-primary">Warisan &amp; Nilai</p>
+                            <h2 class="mt-2 text-3xl font-black lg:text-4xl">Tentang Kami</h2>
+                        </div>
+                        <p class="text-base leading-relaxed text-slate-600">
+                            Bagian dari <span class="font-bold text-slate-900">Putra Gunung Group</span>, didirikan oleh
+                            <span class="font-bold text-slate-900">Bapak Wahyudijal</span> sejak tahun 2000. Selama
+                            lebih dari dua dekade, kami telah tumbuh bersama masyarakat Kerinci dan menjadi pilihan
+                            utama kebutuhan harian keluarga.
+                        </p>
+                        <div class="rounded-xl bg-blue-50 border border-blue-100 p-5">
+                            <p class="text-sm font-bold text-primary mb-1">Filosofi Nama K2M</p>
+                            <p class="text-sm italic text-slate-700 leading-relaxed">
+                                "Nama K2M melambangkan <span class="font-semibold">Kicky, Kalvin, dan Marvel</span> —
+                                putra-putra tercinta Bapak Wahyudijal. Sebuah simbol dedikasi keluarga untuk melayani
+                                generasi masa depan."
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 p-3 rounded-lg bg-slate-50">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                    <span class="material-symbols-outlined">family_restroom</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-sm">Nilai Keluarga</p>
+                                    <p class="text-xs text-slate-500">Hangat &amp; Ramah</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 rounded-lg bg-slate-50">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                    <span class="material-symbols-outlined">verified</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-sm">Terpercaya</p>
+                                    <p class="text-xs text-slate-500">Sejak Tahun 2000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="tentang.html"
+                            class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline">
+                            Baca Selengkapnya <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= PRODUCTS / CATEGORIES ========= -->
+        <section class="py-20 px-6" id="produk">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-10 text-center">
+                    <p class="text-sm font-bold uppercase tracking-widest text-primary">Kategori</p>
+                    <h2 class="mt-2 text-3xl font-black lg:text-4xl">Produk &amp; Layanan Kami</h2>
+                    <p class="mt-3 text-slate-500 max-w-xl mx-auto text-sm">Kami menyediakan berbagai kategori produk
+                        untuk kebutuhan harian keluarga dan usaha Anda.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+                    <!-- Sembako -->
+                    <a href="produk.html"
+                        class="group flex flex-col items-center text-center card-hover cursor-pointer no-underline text-slate-900">
+                        <div
+                            class="mb-3 w-full aspect-square overflow-hidden rounded-2xl bg-amber-50 shadow-sm ring-1 ring-amber-100 relative">
+                            <img class="h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=75"
+                                alt="Sembako - beras, minyak, gula" />
+                            <div
+                                class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors rounded-2xl">
+                            </div>
+                        </div>
+                        <p class="font-bold text-sm">Sembako</p>
+                        <p class="text-xs text-slate-500">Kebutuhan Pokok</p>
+                    </a>
+                    <!-- Frozen Food -->
+                    <a href="produk.html"
+                        class="group flex flex-col items-center text-center card-hover cursor-pointer no-underline text-slate-900">
+                        <div
+                            class="mb-3 w-full aspect-square overflow-hidden rounded-2xl bg-blue-50 shadow-sm ring-1 ring-blue-100 relative">
+                            <img class="h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=400&q=75"
+                                alt="Frozen food - nugget, sosis" />
+                            <div
+                                class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors rounded-2xl">
+                            </div>
+                        </div>
+                        <p class="font-bold text-sm">Frozen Food</p>
+                        <p class="text-xs text-slate-500">Olahan Segar Beku</p>
+                    </a>
+                    <!-- Household -->
+                    <a href="produk.html"
+                        class="group flex flex-col items-center text-center card-hover cursor-pointer no-underline text-slate-900">
+                        <div
+                            class="mb-3 w-full aspect-square overflow-hidden rounded-2xl bg-green-50 shadow-sm ring-1 ring-green-100 relative">
+                            <img class="h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&q=75"
+                                alt="Perlengkapan rumah tangga" />
+                            <div
+                                class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors rounded-2xl">
+                            </div>
+                        </div>
+                        <p class="font-bold text-sm">Perlengkapan Rumah</p>
+                        <p class="text-xs text-slate-500">Alat Rumah Tangga</p>
+                    </a>
+                    <!-- Digital Products -->
+                    <a href="produk.html"
+                        class="group flex flex-col items-center text-center card-hover cursor-pointer no-underline text-slate-900">
+                        <div
+                            class="mb-3 w-full aspect-square overflow-hidden rounded-2xl bg-purple-50 shadow-sm ring-1 ring-purple-100 relative flex items-center justify-center">
+                            <div class="flex flex-col items-center gap-2">
+                                <span class="material-symbols-outlined text-5xl text-purple-500">bolt</span>
+                                <span
+                                    class="text-xs font-bold text-purple-600 uppercase tracking-wide text-center px-2">Pulsa
+                                    &amp; Token Listrik</span>
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors rounded-2xl">
+                            </div>
+                        </div>
+                        <p class="font-bold text-sm">Produk Digital</p>
+                        <p class="text-xs text-slate-500">Pulsa, Token &amp; PPOB</p>
+                    </a>
+                    <!-- Snacks -->
+                    <a href="produk.html"
+                        class="group flex flex-col items-center text-center card-hover cursor-pointer no-underline text-slate-900">
+                        <div
+                            class="mb-3 w-full aspect-square overflow-hidden rounded-2xl bg-orange-50 shadow-sm ring-1 ring-orange-100 relative">
+                            <img class="h-full w-full object-cover"
+                                src="https://images.unsplash.com/photo-1565920740657-b03ee6d2b286?w=400&q=75"
+                                alt="Snack dan oleh-oleh khas" />
+                            <div
+                                class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors rounded-2xl">
+                            </div>
+                        </div>
+                        <p class="font-bold text-sm">Oleh-oleh &amp; Snack</p>
+                        <p class="text-xs text-slate-500">Camilan Khas</p>
+                    </a>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="produk.html"
+                        class="inline-flex items-center gap-2 rounded-full border border-primary text-primary font-bold text-sm px-6 py-3 hover:bg-primary hover:text-white transition-all">
+                        Lihat Semua Produk <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= FACILITIES ========= -->
+        <section class="bg-white py-20 px-6" id="fasilitas">
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <!-- Content -->
+                    <div class="lg:w-1/2">
+                        <p class="text-sm font-bold uppercase tracking-widest text-primary">Kenyamanan</p>
+                        <h2 class="mt-2 mb-8 text-3xl font-black">Fasilitas &amp; Kemudahan</h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-4 p-4 rounded-xl bg-slate-50 hover:bg-blue-50 transition-colors">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                    <span class="material-symbols-outlined">local_parking</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Parkir Luas</p>
+                                    <p class="text-sm text-slate-500 mt-0.5">Area parkir yang nyaman untuk kendaraan
+                                        roda dua maupun roda empat.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 rounded-xl bg-slate-50 hover:bg-blue-50 transition-colors">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                    <span class="material-symbols-outlined">qr_code_2</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Multi Payment</p>
+                                    <p class="text-sm text-slate-500 mt-0.5">Fleksibilitas pembayaran melalui Cash,
+                                        Transfer Bank, atau QRIS.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 rounded-xl bg-slate-50 hover:bg-blue-50 transition-colors">
+                                <div
+                                    class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                    <span class="material-symbols-outlined">map</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Jalur Utama</p>
+                                    <p class="text-sm text-slate-500 mt-0.5">Berada tepat di lintasan utama Kerinci
+                                        menuju Gunung Tujuh.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="fasilitas.html"
+                                class="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline">
+                                Lihat Semua Fasilitas <span
+                                    class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Images -->
+                    <div class="lg:w-1/2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img class="rounded-2xl object-cover h-52 w-full shadow-lg"
+                                src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&q=80"
+                                alt="Area parkir toko swalayan" />
+                            <img class="rounded-2xl object-cover h-52 w-full shadow-lg mt-8"
+                                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80"
+                                alt="Kasir dan area pembayaran modern" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= CONTACT & HOURS ========= -->
+        <section class="bg-slate-100 py-20 px-6 border-t border-slate-200" id="kontak">
+            <div class="mx-auto max-w-7xl">
+                <div class="text-center mb-12">
+                    <p class="text-sm font-bold uppercase tracking-widest text-primary">Hubungi Kami</p>
+                    <h2 class="mt-2 text-3xl font-black">Informasi &amp; Lokasi</h2>
+                </div>
+                <div class="grid gap-8 lg:grid-cols-3">
+                    <!-- Info -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="text-lg font-black mb-5 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">contact_support</span> Kontak
+                        </h3>
+                        <div class="space-y-4">
+                            <a href="kontak.html"
+                                class="flex items-start gap-3 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                                <div>
+                                    <p class="font-bold text-sm">Alamat</p>
+                                    <p class="text-xs text-slate-500 group-hover:text-primary transition-colors">
+                                        Tangkil, Kec. Gunung Tujuh, Kab. Kerinci, Jambi 37163</p>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/6285695941147" target="_blank"
+                                class="flex items-start gap-3 hover:text-primary transition-colors group">
+                                <span class="material-symbols-outlined text-[#25D366] mt-0.5">chat</span>
+                                <div>
+                                    <p class="font-bold text-sm">WhatsApp</p>
+                                    <p class="text-xs text-slate-500 group-hover:text-primary transition-colors">+62
+                                        856-9594-1147</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Hours -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h3 class="text-lg font-black mb-5 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">schedule</span> Jam Buka
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+                                <span class="text-sm text-slate-600">Senin – Rabu</span>
+                                <span
+                                    class="text-sm font-bold bg-primary/10 text-primary px-2 py-0.5 rounded-full">07:30
+                                    – 21:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-slate-100">
+                                <span class="text-sm text-slate-600">Kamis</span>
+                                <span
+                                    class="text-sm font-bold bg-primary/10 text-primary px-2 py-0.5 rounded-full">07:30
+                                    – 21:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="text-sm font-bold text-slate-800">Jumat – Minggu</span>
+                                <span
+                                    class="text-sm font-bold bg-green-100 text-green-700 px-2 py-0.5 rounded-full">07:30
+                                    – 22:00</span>
+                            </div>
+                            <p class="text-[11px] text-slate-400 italic pt-2">*Waktu dapat berubah sewaktu-waktu</p>
+                        </div>
+                    </div>
+                    <!-- Map & WA CTA -->
+                    <div class="flex flex-col gap-4">
+                        <div class="overflow-hidden rounded-2xl shadow-lg ring-1 ring-slate-200 flex-1 cursor-pointer"
+                            onclick="window.location.href='kontak.html'">
+                            <img class="h-full w-full object-cover min-h-[200px] transition-transform hover:scale-105"
+                                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
+                                alt="Peta lokasi K2M Swalayan Tangkil Kerinci" />
+                        </div>
+                        <a class="flex items-center justify-center gap-2 w-full rounded-xl bg-[#25D366] py-3.5 text-center text-sm font-bold text-white shadow-md hover:opacity-90 transition-all"
+                            href="https://wa.me/6285695941147" target="_blank">
+                            <span class="material-symbols-outlined text-[18px]">chat</span> Chat via WhatsApp Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========= STATS BANNER ========= -->
+        <section class="bg-slate-900 text-white py-16 px-6">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <p class="text-4xl font-black text-primary">24+</p>
+                        <p class="text-sm font-medium text-slate-400 mt-1 uppercase tracking-wider">Tahun Berdiri</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-black text-primary">10k+</p>
+                        <p class="text-sm font-medium text-slate-400 mt-1 uppercase tracking-wider">Pelanggan Setia</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-black text-primary">500+</p>
+                        <p class="text-sm font-medium text-slate-400 mt-1 uppercase tracking-wider">Jenis Produk</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-black text-primary">100%</p>
+                        <p class="text-sm font-medium text-slate-400 mt-1 uppercase tracking-wider">Komitmen Lokal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========= FOOTER ========= -->
+    <footer class="bg-white px-6 py-12 border-t border-slate-200">
+        <div class="mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="h-9 w-9 rounded-xl bg-primary flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined text-[20px]">storefront</span>
+                        </div>
+                        <span class="font-black text-lg">K2M SWALAYAN</span>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed max-w-sm">Bagian dari Putra Gunung Group. Melayani
+                        kebutuhan masyarakat Kerinci dengan sepenuh hati sejak tahun 2000.</p>
+                    <div class="flex gap-3 mt-4">
+                        <a href="https://wa.me/6285695941147" target="_blank"
+                            class="h-9 w-9 rounded-full bg-[#25D366] flex items-center justify-center text-white hover:opacity-80 transition">
+                            <span class="material-symbols-outlined text-[18px]">chat</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-sm uppercase tracking-wider">Navigasi</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Beranda</a></li>
+                        <li><a href="tentang.html" class="hover:text-primary transition-colors">Tentang Kami</a></li>
+                        <li><a href="produk.html" class="hover:text-primary transition-colors">Produk</a></li>
+                        <li><a href="fasilitas.html" class="hover:text-primary transition-colors">Fasilitas</a></li>
+                        <li><a href="kontak.html" class="hover:text-primary transition-colors">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-sm uppercase tracking-wider">Akun</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="login.html" class="hover:text-primary transition-colors">Masuk</a></li>
+                        <li><a href="daftar.html" class="hover:text-primary transition-colors">Daftar Akun</a></li>
+                        <li><a href="admin-pengaturan.html" class="hover:text-primary transition-colors">Panel Admin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="mt-10 pt-6 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-slate-400">© 2024 Toko Swalayan K2M. Bagian dari Putra Gunung Group. All rights
+                    reserved.</p>
+                <p class="text-xs text-slate-400">Tangkil, Kec. Gunung Tujuh, Kab. Kerinci, Jambi 37163</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

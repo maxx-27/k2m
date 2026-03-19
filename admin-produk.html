@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>Manajemen Produk - Admin K2M</title>
+</head>
+
+<body class="bg-slate-50 dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside
+            class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col hidden md:flex">
+            <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined font-bold">storefront</span>
+                </div>
+                <h1 class="text-xl font-bold text-primary tracking-tight">K2M Admin</h1>
+            </div>
+            <div class="flex-1 overflow-y-auto py-6 px-4">
+                <p class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4 px-2">Menu
+                    Utama</p>
+                <nav class="space-y-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <span class="font-medium text-sm">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary transition-colors"
+                        href="admin-produk.html">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                        <span class="font-bold text-sm">Manajemen Produk</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span class="font-medium text-sm">Pesanan</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">group</span>
+                        <span class="font-medium text-sm">Pelanggan</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">bar_chart</span>
+                        <span class="font-medium text-sm">Laporan</span>
+                    </a>
+                </nav>
+                <p class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">
+                    Sistem</p>
+                <nav class="space-y-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="admin-pengaturan.html">
+                        <span class="material-symbols-outlined">web</span>
+                        <span class="font-medium text-sm">Konten Website</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="font-medium text-sm">Pengaturan Global</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors"
+                    href="index.html">
+                    <span class="material-symbols-outlined">logout</span>
+                    <span class="font-medium text-sm">Keluar panel</span>
+                </a>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col min-w-0">
+            <!-- Topbar -->
+            <header
+                class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-4 md:px-6 z-10 shrink-0">
+                <div class="flex items-center gap-4">
+                    <button class="md:hidden text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <h2 class="text-xl font-bold truncate hidden sm:block">Katalog Produk</h2>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div
+                        class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-sm cursor-pointer">
+                        A
+                    </div>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="flex-1 overflow-y-auto p-4 md:p-6 bg-slate-50 dark:bg-background-dark">
+                <div class="max-w-7xl mx-auto space-y-6">
+                    <!-- Action Bar -->
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div class="relative w-full sm:max-w-md">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                            <input
+                                class="w-full form-input rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 pl-10 pr-4 py-2.5 text-sm focus:ring-primary focus:border-primary shadow-sm"
+                                placeholder="Cari nama produk, SKU, atau kategori..." type="text" />
+                        </div>
+                        <div class="flex items-center gap-3 w-full sm:w-auto">
+                            <button
+                                class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-medium text-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors w-full sm:w-auto">
+                                <span class="material-symbols-outlined text-[20px]">filter_list</span>
+                                Filter
+                            </button>
+                            <button
+                                class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-white font-bold text-sm shadow-sm hover:bg-primary/90 transition-colors w-full sm:w-auto"
+                                onclick="alert('Buka modal tambah produk baru')">
+                                <span class="material-symbols-outlined text-[20px]">add</span>
+                                Tambah Produk
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Quick Stats / Category Filter Tabs -->
+                    <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+                        <button
+                            class="px-4 py-2 rounded-full bg-slate-800 dark:bg-slate-700 text-white text-sm font-medium whitespace-nowrap">Semua
+                            (124)</button>
+                        <button
+                            class="px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary text-sm font-medium whitespace-nowrap transition-colors">Sembako
+                            (45)</button>
+                        <button
+                            class="px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary text-sm font-medium whitespace-nowrap transition-colors">Frozen
+                            Food (32)</button>
+                        <button
+                            class="px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary text-sm font-medium whitespace-nowrap transition-colors">Digital
+                            &amp; PPOB (15)</button>
+                        <button
+                            class="px-4 py-2 rounded-full bg-red-50/50 dark:bg-red-900/10 border border-red-200 dark:border-red-900/30 text-red-600 dark:text-red-400 hover:border-red-500 text-sm font-medium whitespace-nowrap transition-colors flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[16px]">warning</span> Stok Habis (3)
+                        </button>
+                    </div>
+                    <!-- Product Table -->
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr
+                                        class="bg-slate-50/80 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-xs uppercase tracking-wider">
+                                        <th class="p-4 font-bold w-12 text-center">
+                                            <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                        </th>
+                                        <th class="p-4 font-bold min-w-[300px]">Info Produk</th>
+                                        <th class="p-4 font-bold">Kategori</th>
+                                        <th class="p-4 font-bold text-right">Harga Jual</th>
+                                        <th class="p-4 font-bold text-center">Stok</th>
+                                        <th class="p-4 font-bold text-center w-24">Status</th>
+                                        <th class="p-4 font-bold text-center w-20">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                    <!-- Row 1 -->
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors group">
+                                        <td class="p-4 text-center">
+                                            <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex items-center gap-4">
+                                                <div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center shrink-0 border border-slate-200 dark:border-slate-700"
+                                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdB3ssGpnhwdjo4z6DJTx-8iDUie9rrT-cAMUu31ljw4mHOKxU7ncTW5GWrXNJptqselueKPi2DlacmpGti74iTEdE3lWeq0o7EoDS9H25F2eMKUko8c-g766zd9u1PvjwYiSEN-afg92SAnlUU-8PSPxpHMW1PQoYvMipS4Ud8wZAjgUK3_0fRMi7H7rZJB4Yq3kHj99pj21VbyhzaN0qzN-ZgDOXl5WnXfMMSEH4gmwnUoDMBZxTn5likTNimVgTH_coYFNEAeE')">
+                                                </div>
+                                                <div class="flex flex-col">
+                                                    <p
+                                                        class="font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors cursor-pointer text-sm">
+                                                        Beras Setra Ramos Premium 5kg</p>
+                                                    <p class="text-xs text-slate-500 mt-0.5">SKU: SBO-BRS-001 • Satuan:
+                                                        Sak</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-sm text-slate-600 dark:text-slate-400">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400">Sembako</span>
+                                        </td>
+                                        <td class="p-4 text-right">
+                                            <p class="font-bold text-sm text-slate-800 dark:text-slate-200">Rp 69.500
+                                            </p>
+                                            <p class="text-[10px] text-green-600 dark:text-green-400 mt-0.5">Grosir: Rp
+                                                68.000</p>
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <span
+                                                class="font-medium text-sm text-slate-800 dark:text-slate-200">45</span>
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <div class="inline-flex items-center justify-center p-1 rounded-md bg-green-50 text-green-600 dark:bg-green-900/20 dark:text-green-400"
+                                                title="Aktif di toko online">
+                                                <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex items-center justify-center gap-2">
+                                                <button class="text-slate-400 hover:text-primary transition-colors p-1"
+                                                    title="Edit">
+                                                    <span class="material-symbols-outlined text-[20px]">edit</span>
+                                                </button>
+                                                <button class="text-slate-400 hover:text-red-500 transition-colors p-1"
+                                                    title="Hapus">
+                                                    <span class="material-symbols-outlined text-[20px]">delete</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 2 -->
+                                    <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors group">
+                                        <td class="p-4 text-center">
+                                            <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex items-center gap-4">
+                                                <div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center shrink-0 border border-slate-200 dark:border-slate-700"
+                                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnw0vdMAORZn2q33i3ypKN6iE6qMoprbMDqrzne4PYLAGbTKskQHW82q7b8663vN4YX31_TirSTGSWlVRyPdyohpJmgWQKGwpSeuRjrT2aCZK5cJOengg7sZ8xVI4IpenGEH5J_2X3LvZvleqn5bHXt42KZb283mkdmgCMxFb1p-eTESVhvzhaBz8Ojhas0Eu4PI9Ztf8C2UwgTaEjCZs7x8GD_ZMBp_tlpcxbSnjUBmDMeRDoX6aAIzNiVdU0LdymXidD0Dj8xPY')">
+                                                </div>
+                                                <div class="flex flex-col">
+                                                    <p
+                                                        class="font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors cursor-pointer text-sm">
+                                                        Fiesta Chicken Nugget 500gr</p>
+                                                    <p class="text-xs text-slate-500 mt-0.5">SKU: FRZ-FST-002 • Satuan:
+                                                        Pcs</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-sm text-slate-600 dark:text-slate-400">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400">Frozen
+                                                Food</span>
+                                        </td>
+                                        <td class="p-4 text-right">
+                                            <p class="font-bold text-sm text-slate-800 dark:text-slate-200">Rp 48.000
+                                            </p>
+                                            <p class="text-[10px] text-slate-400 mt-0.5">-</p>
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <span
+                                                class="font-medium text-sm text-slate-800 dark:text-slate-200">12</span>
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <div class="inline-flex items-center justify-center p-1 rounded-md bg-green-50 text-green-600 dark:bg-green-900/20 dark:text-green-400"
+                                                title="Aktif di toko online">
+                                                <span class="material-symbols-outlined text-[20px]">visibility</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex items-center justify-center gap-2">
+                                                <button class="text-slate-400 hover:text-primary transition-colors p-1"
+                                                    title="Edit">
+                                                    <span class="material-symbols-outlined text-[20px]">edit</span>
+                                                </button>
+                                                <button class="text-slate-400 hover:text-red-500 transition-colors p-1"
+                                                    title="Hapus">
+                                                    <span class="material-symbols-outlined text-[20px]">delete</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- Row 3 (Out of stock) -->
+                                    <tr
+                                        class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors group bg-red-50/20 dark:bg-red-900/5">
+                                        <td class="p-4 text-center">
+                                            <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex items-center gap-4">
+                                                <div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 bg-cover bg-center shrink-0 border border-slate-200 dark:border-slate-700"
+                                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDz7hfPuL-2K0CDox1T3H-b9GvQtUoNlDsPLkDvt1gkuF5B-_BJcJofEFZum_3jy3PdrS_2EdSVhvdWvoHre7RAFqVNbz4Tkti-Y3qiHNMZFkefvTDy0ts-31Fi-t69p7pypm8KQVgIQc8WX7cbnVc-30vk1OCA9eOjd6btGO8EGGfo2m4WDzInUzNZOYDNZNg72gfftPv8hm01lPO9GbZtRs20QRtyOzlXPWEdklLcOvqNOVswveHqgk0XpLhTzENHl6_d5ss95mI')">
+                                                </div>
+                                                <div class="flex flex-col">
+                                                    <p
+                                                        class="font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors cursor-pointer text-sm">
+                                                        Minyak Goreng Bimoli 2L</p>
+                                                    <p class="text-xs text-slate-500 mt-0.5">SKU: SBO-MNY-005 • Satuan:
+                                                        Pouch</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-sm text-slate-600 dark:text-slate-400">
+                                            <span
+                                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400">Sembako</span>
+                                        </td>
+                                        <td class="p-4 text-right">
+                                            <p class="font-bold text-sm text-slate-800 dark:text-slate-200">Rp 34.200
+                                            </p>
+                                            <p class="text-[10px] text-green-600 dark:text-green-400 mt-0.5">Grosir: Rp
+                                                33.500</p>
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <span
+                                                class="font-bold text-sm text-red-500 flex items-center justify-center gap-1">
+                                                <span class="material-symbols-outlined text-[16px]">warning</span> 0
+                                            </span>
+                                        </td>
+                                        <td class="p-4 text-center">
+                                            <div class="inline-flex items-center justify-center p-1 rounded-md bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500"
+                                                title="Disembunyikan otomatis (Stok Habis)">
+                                                <span
+                                                    class="material-symbols-outlined text-[20px]">visibility_off</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="flex items-center justify-center gap-2">
+                                                <button class="text-slate-400 hover:text-primary transition-colors p-1"
+                                                    title="Edit">
+                                                    <span class="material-symbols-outlined text-[20px]">edit</span>
+                                                </button>
+                                                <button class="text-slate-400 hover:text-red-500 transition-colors p-1"
+                                                    title="Hapus">
+                                                    <span class="material-symbols-outlined text-[20px]">delete</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Pagination Footer -->
+                        <div
+                            class="px-6 py-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-sm">
+                            <p class="text-slate-500 dark:text-slate-400">Menampilkan <span
+                                    class="font-bold text-slate-800 dark:text-slate-200">1</span> sampai <span
+                                    class="font-bold text-slate-800 dark:text-slate-200">10</span> dari <span
+                                    class="font-bold text-slate-800 dark:text-slate-200">124</span> produk</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="w-8 h-8 rounded border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-50"
+                                    disabled="">
+                                    <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+                                </button>
+                                <button
+                                    class="w-8 h-8 rounded bg-primary text-white font-bold text-xs flex items-center justify-center">1</button>
+                                <button
+                                    class="w-8 h-8 rounded border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold transition-colors">2</button>
+                                <button
+                                    class="w-8 h-8 rounded border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-bold transition-colors">3</button>
+                                <span class="text-slate-400 px-1">...</span>
+                                <button
+                                    class="w-8 h-8 rounded border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

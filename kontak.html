@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>Kontak - Toko Swalayan K2M</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <!-- Navigation Header -->
+                    <header
+                        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-4 md:px-10 py-3 mb-6">
+                        <div class="flex items-center gap-4 text-primary cursor-pointer"
+                            onclick="window.location.href='index.html'">
+                            <div class="size-8">
+                                <span class="material-symbols-outlined text-4xl">storefront</span>
+                            </div>
+                            <h2
+                                class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em]">
+                                Toko Swalayan K2M</h2>
+                        </div>
+                        <div class="flex flex-1 justify-end gap-4 md:gap-8 items-center">
+                            <nav class="hidden md:flex items-center gap-9">
+                                <a class="text-slate-900 dark:text-slate-100 text-sm font-medium hover:text-primary transition-colors"
+                                    href="index.html">Beranda</a>
+                                <a class="text-slate-900 dark:text-slate-100 text-sm font-medium hover:text-primary transition-colors"
+                                    href="produk.html">Produk</a>
+                                <a class="text-primary text-sm font-bold" href="kontak.html">Kontak</a>
+                            </nav>
+                            <button
+                                class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-100 px-3 hover:bg-primary hover:text-white transition-all">
+                                <span class="material-symbols-outlined">search</span>
+                            </button>
+                            <button
+                                class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-primary text-white hover:bg-primary/90 transition-all ml-2"
+                                title="Masuk / Daftar" onclick="window.location.href='login.html'">
+                                <span class="material-symbols-outlined">person</span>
+                            </button>
+                        </div>
+                    </header>
+                    <!-- Hero Section -->
+                    <div class="@container">
+                        <div class="@[480px]:px-4 @[480px]:py-3">
+                            <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-[300px] relative"
+                                data-alt="Modern supermarket interior with organized shelves and bright lighting"
+                                style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRUFXt17DBisjY3HjxUSRid_of9CAbPdW3R65MQ8fMMiUmTB5xlwLqK4OUqQ8IyZx8slCgkl98dFPhNEKJeC_T92yfOCpp8ChqgPLGN2KeG4-bO8fsPuV4108wuM_2NcqYEntzs-nloelBsBZ53pQjvG9fHkFdJHBp_twF4CybP3ESpsFXmyi0iU3tcjJNJmm2C_GlCVXeiMSrDv_qOoS1Aj8I62pKi5hhUjmRrJg5wJX8NgJfTOtjQLjguwMFfCvH3rinvxtqSDs");'>
+                                <div class="flex flex-col p-6 md:p-10">
+                                    <h1 class="text-white text-4xl md:text-5xl font-bold leading-tight">Hubungi Kami
+                                    </h1>
+                                    <p class="text-slate-200 mt-2 max-w-lg">Kami siap melayani kebutuhan harian Anda
+                                        dengan produk berkualitas dan pelayanan ramah.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Main Content Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 mt-6">
+                        <!-- Left Column: Info & Operational -->
+                        <div class="flex flex-col gap-8">
+                            <div>
+                                <h2
+                                    class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">schedule</span> Jam Operasional
+                                </h2>
+                                <div
+                                    class="bg-white dark:bg-slate-900/50 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800">
+                                    <div
+                                        class="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-800">
+                                        <p class="text-slate-600 dark:text-slate-400 font-medium">Senin - Rabu</p>
+                                        <p
+                                            class="text-slate-900 dark:text-slate-100 font-bold bg-primary/10 px-3 py-1 rounded-full text-sm">
+                                            06:00 - 21:30</p>
+                                    </div>
+                                    <div
+                                        class="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-800">
+                                        <p class="text-slate-600 dark:text-slate-400 font-medium">Kamis</p>
+                                        <p
+                                            class="text-slate-900 dark:text-slate-100 font-bold bg-primary/10 px-3 py-1 rounded-full text-sm">
+                                            06:30 - 21:30</p>
+                                    </div>
+                                    <div class="flex justify-between items-center py-3">
+                                        <p class="text-slate-600 dark:text-slate-400 font-medium">Jumat - Minggu</p>
+                                        <p
+                                            class="text-slate-900 dark:text-slate-100 font-bold bg-primary/10 px-3 py-1 rounded-full text-sm">
+                                            06:00 - 21:30</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h2
+                                    class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">contact_support</span> Hubungi
+                                    Langsung
+                                </h2>
+                                <div class="flex flex-col gap-4">
+                                    <a class="flex items-center gap-4 p-4 bg-[#25D366] text-white rounded-xl hover:opacity-90 transition-all shadow-md"
+                                        href="https://wa.me/6285695941147" target="_blank">
+                                        <span class="material-symbols-outlined text-3xl">chat</span>
+                                        <div>
+                                            <p class="text-xs uppercase font-bold tracking-wider opacity-80">WhatsApp
+                                                Kami</p>
+                                            <p class="text-lg font-bold">+62 856-9594-1147</p>
+                                        </div>
+                                    </a>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <a class="flex items-center justify-center gap-2 p-3 bg-slate-200 dark:bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all"
+                                            href="#">
+                                            <span class="material-symbols-outlined">public</span> Instagram
+                                        </a>
+                                        <a class="flex items-center justify-center gap-2 p-3 bg-slate-200 dark:bg-slate-800 rounded-lg hover:bg-primary hover:text-white transition-all"
+                                            href="#">
+                                            <span class="material-symbols-outlined">social_leaderboard</span> Facebook
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Column: Location Map -->
+                        <div class="flex flex-col gap-4">
+                            <h2
+                                class="text-slate-900 dark:text-slate-100 tracking-tight text-2xl font-bold flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">location_on</span> Lokasi Kami
+                            </h2>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Tangkil, Kec. Gunung Tujuh, Kabupaten
+                                Kerinci, Jambi.</p>
+                            <div
+                                class="rounded-xl overflow-hidden h-[400px] border-4 border-white dark:border-slate-800 shadow-xl relative">
+                                <img alt="Map location in Kerinci" class="w-full h-full object-cover"
+                                    data-alt="Map view of Tangkil area in Gunung Tujuh Kerinci showing roads and landmarks"
+                                    data-location="Tangkil, Gunung Tujuh, Kerinci"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD86sIXnO7CN3AAX6-v0XAD3FgUMw0y4aL-47vmDrKParGE3or_SSOOuDOfE6ReF8_pIyJ2i83dgKk41suqwY2Sz9OuUwV9qLNPhGuaCIX2exxwo58q_Rqf5z2D82AbMKU5GIdWb5kD0AhgjNWbGjuaG8220RQoFPi-t6vAh74gyNeMfUGHTiGDoCb_sGjMSm-mJJG_rlsPnftYFHyCCcOROCweehSHGfP_kzDf2S5ePyybnynVXD1HOS3EDmsy9G9qgie_xoY7rUw" />
+                                <div
+                                    class="absolute inset-0 bg-primary/10 flex items-center justify-center pointer-events-none">
+                                    <div
+                                        class="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-2xl flex flex-col items-center gap-2 max-w-[200px] text-center pointer-events-auto cursor-pointer">
+                                        <span class="material-symbols-outlined text-red-500 text-4xl">location_on</span>
+                                        <p class="font-bold text-sm">K2M Swalayan</p>
+                                        <button class="text-primary text-xs font-bold underline">Buka di Google
+                                            Maps</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact Form Minimal -->
+                    <div class="p-4 mt-8 mb-20">
+                        <div class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-8 border border-primary/20">
+                            <div class="max-w-xl mx-auto text-center">
+                                <h3 class="text-2xl font-bold mb-2">Ada Pertanyaan atau Masukan?</h3>
+                                <p class="text-slate-600 dark:text-slate-400 mb-6">Kirimkan pesan kepada kami dan tim
+                                    kami akan segera membalas Anda.</p>
+                                <form class="space-y-4"
+                                    onsubmit="event.preventDefault(); alert('Pesan Anda telah dikirim!');">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <input
+                                            class="w-full p-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-primary outline-none"
+                                            placeholder="Nama Anda" type="text" required />
+                                        <input
+                                            class="w-full p-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-primary outline-none"
+                                            placeholder="Email / No. HP" type="text" required />
+                                    </div>
+                                    <textarea
+                                        class="w-full p-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 focus:ring-2 focus:ring-primary outline-none"
+                                        placeholder="Pesan Anda" rows="4" required></textarea>
+                                    <button
+                                        class="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:scale-105 transition-transform shadow-lg w-full md:w-auto"
+                                        type="submit">
+                                        Kirim Pesan
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer -->
+                    <footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-4 text-center">
+                        <p class="text-slate-500 text-sm">© 2024 Toko Swalayan K2M - Kerinci. Hak Cipta Dilindungi.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

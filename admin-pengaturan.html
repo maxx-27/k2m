@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <title>Pengaturan Konten - Admin K2M</title>
+</head>
+
+<body class="bg-slate-50 dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside
+            class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col hidden md:flex">
+            <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined font-bold">storefront</span>
+                </div>
+                <h1 class="text-xl font-bold text-primary tracking-tight">K2M Admin</h1>
+            </div>
+            <div class="flex-1 overflow-y-auto py-6 px-4">
+                <p class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-4 px-2">Menu
+                    Utama</p>
+                <nav class="space-y-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <span class="font-medium text-sm">Dashboard</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="admin-produk.html">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                        <span class="font-medium text-sm">Manajemen Produk</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span class="font-medium text-sm">Pesanan</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">group</span>
+                        <span class="font-medium text-sm">Pelanggan</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">bar_chart</span>
+                        <span class="font-medium text-sm">Laporan</span>
+                    </a>
+                </nav>
+                <p class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mt-8 mb-4 px-2">
+                    Sistem</p>
+                <nav class="space-y-1">
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary transition-colors"
+                        href="admin-pengaturan.html">
+                        <span class="material-symbols-outlined">web</span>
+                        <span class="font-bold text-sm">Konten Website</span>
+                    </a>
+                    <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="font-medium text-sm">Pengaturan Global</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors"
+                    href="index.html">
+                    <span class="material-symbols-outlined">logout</span>
+                    <span class="font-medium text-sm">Keluar panel</span>
+                </a>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <div class="flex-1 flex flex-col min-w-0">
+            <!-- Topbar -->
+            <header
+                class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-6 z-10">
+                <div class="flex items-center gap-4">
+                    <button class="md:hidden text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                    <h2 class="text-xl font-bold truncate hidden sm:block">Pengaturan Konten Website</h2>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a class="hidden sm:flex items-center gap-2 text-sm text-primary font-medium hover:underline bg-primary/5 px-3 py-1.5 rounded-full"
+                        href="index.html" target="_blank">
+                        <span class="material-symbols-outlined text-sm">visibility</span> Lihat Website
+                    </a>
+                    <button
+                        class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 relative">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+                    </button>
+                    <div
+                        class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold shadow-sm cursor-pointer">
+                        A
+                    </div>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="flex-1 overflow-y-auto p-4 md:p-8 bg-slate-50 dark:bg-background-dark">
+                <div class="max-w-4xl mx-auto space-y-8 pb-12">
+                    <!-- Notification Banner -->
+                    <div
+                        class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4 flex items-start gap-3">
+                        <span class="material-symbols-outlined text-blue-500 mt-0.5">info</span>
+                        <div>
+                            <h4 class="font-bold text-blue-800 dark:text-blue-300">Mode Pengeditan Aktif</h4>
+                            <p class="text-sm text-blue-600 dark:text-blue-400 mt-1">Perubahan yang Anda simpan di sini
+                                akan langsung terlihat oleh pengunjung website di halaman utama (<a class="underline"
+                                    href="index.html">index.html</a>).</p>
+                        </div>
+                    </div>
+                    <form
+                        onsubmit="event.preventDefault(); alert('Perubahan berhasil disimpan dan dipublikasikan!'); window.location.reload();">
+                        <!-- Section: Hero Banner -->
+                        <section
+                            class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden mb-8">
+                            <div
+                                class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 flex justify-between items-center">
+                                <h3 class="font-bold text-lg flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">view_carousel</span>
+                                    Bagian: Hero Banner (Beranda)
+                                </h3>
+                                <div
+                                    class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold rounded">
+                                    AKTIF</div>
+                            </div>
+                            <div class="p-6 space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-4">
+                                        <label class="block">
+                                            <span
+                                                class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1 block">Judul
+                                                Utama (H1)</span>
+                                            <input
+                                                class="w-full form-input rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary text-sm p-3 block"
+                                                type="text" value="Penuhi Kebutuhan Harian Anda di K2M Swalayan" />
+                                        </label>
+                                        <label class="block">
+                                            <span
+                                                class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1 block">Teks
+                                                Slogan / Deskripsi (P)</span>
+                                            <textarea
+                                                class="w-full form-input rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary text-sm p-3 h-24 block">Belanja hemat, super lengkap, dan pelayanan ramah. K2M Swalayan siap melayani kebutuhan keluarga Anda di Kerinci dan sekitarnya.</textarea>
+                                        </label>
+                                        <label class="block">
+                                            <span
+                                                class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1 block">Label
+                                                Tombol Aksi</span>
+                                            <input
+                                                class="w-full form-input rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary text-sm p-3 block"
+                                                type="text" value="Belanja Sekarang" />
+                                        </label>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <label class="block">
+                                            <span
+                                                class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 block">Gambar
+                                                Latar (URL/Upload)</span>
+                                            <div
+                                                class="w-full h-40 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 flex flex-col items-center justify-center text-slate-500 bg-slate-50 dark:bg-slate-800 overflow-hidden relative group cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                                                <img alt="Current Hero Banner"
+                                                    class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-30 transition-opacity"
+                                                    src="https://lh3.googleusercontent.com/aida-public/AONxH3xxkC050mDEf8hS5pM8z0G6bYd6iL9vWvw3d9m2_3G94o-0dYn7VwzWp7J4pXQ9I0QxNn5hQwX6H0Zk0B4zF-Y4U6WpQwAza8O7wT10_8jA5qV8VnR64zE0pU-7qU-rFqy66MkWg0mKwS10xK2X0oZ50lA1mD8Q-3-7_lS2aT5V9M0_sE8h" />
+                                                <div class="relative z-10 flex flex-col items-center">
+                                                    <span
+                                                        class="material-symbols-outlined text-3xl mb-1">cloud_upload</span>
+                                                    <span class="text-sm font-medium">Klik untuk mengubah gambar</span>
+                                                    <span class="text-xs mt-1">Rekomendasi ukuran: 1920x1080px</span>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Section: Tentang Kami Singkat -->
+                        <section
+                            class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden mb-8">
+                            <div
+                                class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 flex justify-between items-center">
+                                <h3 class="font-bold text-lg flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">info</span>
+                                    Bagian: Tentang Kami (Beranda)
+                                </h3>
+                            </div>
+                            <div class="p-6 space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-4">
+                                        <label class="block">
+                                            <span
+                                                class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1 block">Judul
+                                                Bagian</span>
+                                            <input
+                                                class="w-full form-input rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary text-sm p-3 block"
+                                                type="text" value="Sejak Tahun 2000 Menemani Anda" />
+                                        </label>
+                                        <label class="block">
+                                            <span
+                                                class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-1 block">Deskripsi
+                                                Singkat (P)</span>
+                                            <textarea
+                                                class="w-full form-input rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary text-sm p-3 h-32 block">Berawal dari tekad Bapak Wahyudijal, kami terus berkembang menghadirkan layanan belanja terbaik bagi masyarakat. Nama K2M merupakan komitmen kami pada generasi penerus.</textarea>
+                                        </label>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <h4 class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-2 block">
+                                            Nilai-nilai Utama (Poin Cepat)</h4>
+                                        <div class="space-y-3">
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                                    <span class="material-symbols-outlined text-sm">verified</span>
+                                                </div>
+                                                <input
+                                                    class="flex-1 form-input rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary text-sm p-2"
+                                                    type="text" value="Kualitas Produk Terjamin" />
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                                    <span class="material-symbols-outlined text-sm">payments</span>
+                                                </div>
+                                                <input
+                                                    class="flex-1 form-input rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary text-sm p-2"
+                                                    type="text" value="Harga Jujur dan Bersahabat" />
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <div
+                                                    class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                                    <span
+                                                        class="material-symbols-outlined text-sm">volunteer_activism</span>
+                                                </div>
+                                                <input
+                                                    class="flex-1 form-input rounded-lg border-slate-300 dark:border-slate-700 dark:bg-slate-800 focus:ring-primary focus:border-primary text-sm p-2"
+                                                    type="text" value="Pelayanan Hangat Sepenuh Hati" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Save Actions -->
+                        <div
+                            class="flex items-center justify-end gap-4 sticky bottom-6 bg-white/80 dark:bg-slate-900/80 backdrop-blur pb-2 pt-4 px-4 rounded-xl shadow-[0_-10px_20px_rgba(0,0,0,0.05)] border border-slate-200 dark:border-slate-800 z-50">
+                            <button
+                                class="px-6 py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                                type="button">
+                                Batal
+                            </button>
+                            <button
+                                class="px-8 py-3 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 hover:shadow-lg transition-all flex items-center gap-2"
+                                type="submit">
+                                <span class="material-symbols-outlined">save</span>
+                                Simpan &amp; Publikasikan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

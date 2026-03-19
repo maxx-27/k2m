@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tentang Kami - K2M Swalayan</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-background-light dark:bg-background-dark">
+                <div class="flex items-center gap-4 text-primary cursor-pointer"
+                    onclick="window.location.href='index.html'">
+                    <div class="size-8">
+                        <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">K2M
+                        Swalayan</h2>
+                </div>
+                <div class="hidden md:flex flex-1 justify-end gap-8">
+                    <nav class="flex items-center gap-9">
+                        <a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="index.html">Beranda</a>
+                        <a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="produk.html">Produk</a>
+                        <a class="text-primary text-sm font-bold tracking-wide" href="tentang.html">Tentang Kami</a>
+                        <a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors"
+                            href="kontak.html">Kontak</a>
+                    </nav>
+                    <div class="flex gap-2">
+                        <button
+                            class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-all cursor-pointer"
+                            title="Masuk / Daftar" onclick="window.location.href='login.html'">
+                            <span class="material-symbols-outlined">person</span>
+                        </button>
+                        <button
+                            class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary text-white hover:bg-primary/90 transition-all">
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main class="flex flex-col flex-1 max-w-[1200px] mx-auto w-full px-6 py-10 gap-16">
+                <!-- Hero Section -->
+                <section class="@container">
+                    <div
+                        class="relative min-h-[450px] flex flex-col justify-center overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 shadow-2xl">
+                        <div class="absolute inset-0 z-0 bg-cover bg-center"
+                            data-alt="Modern supermarket interior with organized shelves and lighting"
+                            style='background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCifOhKAGgiD5z73rsuMFydG7PlI_XXg-vrXXCfJi_T8JUioyVO2jRNoqg3LbgAqce0jeXlLVuOv3fzYB6Za3WrrARyUxqIngwkpjkQOm4NMybi90nTpdjdFOs8qQAKlLvVZz7v8QR3eeHQ1FPBUNndH1v-2SvjeNXPJcDo5DRRn1xWGjo2vbYF2K4vbTx9pb8QdM3NB2DRvU06PryAaU8Ap628plK1jjGqOw4fCWRTHmLlq7z8NZh-7jw--7XyR6yIR5ijUAa5qok");'>
+                        </div>
+                        <div class="relative z-10 p-8 md:p-16 max-w-2xl">
+                            <span
+                                class="inline-block px-4 py-1 rounded-full bg-primary text-white text-xs font-bold uppercase tracking-widest mb-4">Sejarah
+                                &amp; Warisan</span>
+                            <h1 class="text-white text-4xl md:text-6xl font-black leading-tight mb-6">Membangun
+                                Kepercayaan Sejak Tahun 2000</h1>
+                            <p class="text-slate-200 text-lg md:text-xl leading-relaxed">Berawal dari visi Bapak
+                                Wahyudijal untuk menghadirkan layanan belanja terbaik bagi masyarakat Kerinci.</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Family Legacy Section -->
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex flex-col gap-2">
+                            <h2
+                                class="text-3xl md:text-4xl font-black text-slate-900 dark:text-slate-100 leading-tight">
+                                Putra Gunung Group: Warisan Keluarga</h2>
+                            <div class="w-20 h-1.5 bg-primary rounded-full"></div>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            K2M Swalayan bukan sekadar toko retail biasa. Didirikan oleh <strong>Bapak
+                                Wahyudijal</strong> pada milenium baru tahun 2000, usaha ini merupakan bagian inti dari
+                            visi besar Putra Gunung Group.
+                        </p>
+                        <div class="bg-primary/5 border-l-4 border-primary p-6 rounded-r-xl">
+                            <p class="italic text-slate-800 dark:text-slate-200 text-lg">
+                                "Nama <strong>K2M</strong> diambil dari inisial putra-putra tercinta Bapak Wahyudijal:
+                                <strong>Kicky, Kalvin, dan Marvel</strong>. Sebuah simbol dedikasi keluarga untuk
+                                melayani generasi masa depan."
+                            </p>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                            Selama lebih dari dua dekade, kami telah tumbuh bersama masyarakat Kerinci, bertransformasi
+                            dari sebuah toko lokal menjadi simbol kepercayaan dan kualitas dalam penyediaan kebutuhan
+                            harian keluarga.
+                        </p>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-primary/10 rounded-xl blur-lg group-hover:bg-primary/20 transition-all">
+                        </div>
+                        <img alt="Smiling owner in front of family business"
+                            class="relative rounded-xl shadow-xl w-full aspect-square object-cover"
+                            data-alt="Happy business owner in a modern supermarket setting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD40avhDKonx10TvSGmGBeH8PhhtHtk0HbkpkRO7Bm3IVjmVpSnq5WyWf4nCYxrlaCE6aHq2d5xmsjD7pk1x96oabbIyGf3dn_SGpDAmh3yIAG4uRV7UhQyv5W6CiPKBLgonADpMAoN77aF33_QWMve6AfcLyrKSjj6qv7M9gNEXAuuX-EhWX9q-Zag6xbNWc5TG8xMh8XTJw9XaYVxrxS8VG6csp_u9mBroylHe7ZfAvXkCFBD82vwU2BiDGeVF_fTrz6tPuYrPvM" />
+                    </div>
+                </section>
+                <!-- Vision & Mission -->
+                <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1 bg-primary p-8 rounded-xl text-white flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-4">Visi Kami</h3>
+                        <p class="text-primary-50 text-lg leading-relaxed">
+                            Menjadi pusat perbelanjaan modern pilihan utama keluarga di Kerinci yang mengedepankan
+                            nilai-nilai kekeluargaan, kualitas produk, dan pelayanan prima.
+                        </p>
+                    </div>
+                    <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div
+                            class="p-6 rounded-xl border border-primary/20 bg-background-light dark:bg-background-dark/50 hover:shadow-lg transition-shadow">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                                <span class="material-symbols-outlined">verified</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Kualitas Terjamin</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Menyediakan produk segar dan barang
+                                kebutuhan berkualitas tinggi setiap harinya.</p>
+                        </div>
+                        <div
+                            class="p-6 rounded-xl border border-primary/20 bg-background-light dark:bg-background-dark/50 hover:shadow-lg transition-shadow">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                                <span class="material-symbols-outlined">volunteer_activism</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Pelayanan Hangat</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Melayani setiap pelanggan layaknya
+                                bagian dari keluarga besar Putra Gunung Group.</p>
+                        </div>
+                        <div
+                            class="p-6 rounded-xl border border-primary/20 bg-background-light dark:bg-background-dark/50 hover:shadow-lg transition-shadow">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                                <span class="material-symbols-outlined">payments</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Harga Bersahabat</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Berkomitmen menjaga keterjangkauan
+                                harga untuk kesejahteraan masyarakat Kerinci.</p>
+                        </div>
+                        <div
+                            class="p-6 rounded-xl border border-primary/20 bg-background-light dark:bg-background-dark/50 hover:shadow-lg transition-shadow">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                                <span class="material-symbols-outlined">local_shipping</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Inovasi Layanan</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm">Terus berinovasi dalam kemudahan
+                                belanja tradisional maupun modern.</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Community Trust Banner -->
+                <section
+                    class="bg-slate-900 dark:bg-primary/10 rounded-2xl p-8 md:p-12 text-center flex flex-col items-center gap-6 overflow-hidden relative">
+                    <div class="absolute top-0 right-0 p-10 opacity-10">
+                        <span class="material-symbols-outlined text-[150px] text-white">storefront</span>
+                    </div>
+                    <h2 class="text-2xl md:text-4xl font-black text-white leading-tight max-w-2xl">Kepercayaan Anda
+                        Adalah Energi Kami Untuk Terus Melayani</h2>
+                    <p class="text-slate-400 text-lg max-w-xl">
+                        Kami bangga telah menjadi bagian dari perjalanan hidup masyarakat Kerinci selama lebih dari 24
+                        tahun.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-8 mt-4">
+                        <div class="flex flex-col items-center">
+                            <span class="text-primary text-3xl font-black">24+</span>
+                            <span class="text-slate-400 text-xs uppercase tracking-widest">Tahun Berdiri</span>
+                        </div>
+                        <div class="w-px h-12 bg-slate-700 hidden sm:block"></div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-primary text-3xl font-black">10k+</span>
+                            <span class="text-slate-400 text-xs uppercase tracking-widest">Pelanggan Setia</span>
+                        </div>
+                        <div class="w-px h-12 bg-slate-700 hidden sm:block"></div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-primary text-3xl font-black">100%</span>
+                            <span class="text-slate-400 text-xs uppercase tracking-widest">Komitmen Lokal</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- Footer -->
+            <footer class="bg-slate-100 dark:bg-slate-950 px-6 md:px-20 py-12 mt-20 border-t border-primary/10">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-primary cursor-pointer"
+                            onclick="window.location.href='index.html'">
+                            <span class="material-symbols-outlined font-bold">shopping_basket</span>
+                            <h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold">K2M Swalayan</h2>
+                        </div>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Bagian dari Putra Gunung Group. Melayani kebutuhan masyarakat Kerinci dengan sepenuh hati
+                            sejak tahun 2000.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 text-slate-900 dark:text-slate-100">Navigasi</h4>
+                        <ul class="flex flex-col gap-2 text-sm text-slate-500">
+                            <li><a class="hover:text-primary" href="index.html">Beranda</a></li>
+                            <li><a class="hover:text-primary" href="produk.html">Produk Unggulan</a></li>
+                            <li><a class="hover:text-primary" href="produk.html">Promo Mingguan</a></li>
+                            <li><a class="hover:text-primary" href="tentang.html">Tentang Kami</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 text-slate-900 dark:text-slate-100">Bantuan</h4>
+                        <ul class="flex flex-col gap-2 text-sm text-slate-500">
+                            <li><a class="hover:text-primary" href="kontak.html">FAQ</a></li>
+                            <li><a class="hover:text-primary" href="kontak.html">Kontak Kami</a></li>
+                            <li><a class="hover:text-primary" href="tentang.html">Karir</a></li>
+                            <li><a class="hover:text-primary" href="kontak.html">Lokasi Toko</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-4 text-slate-900 dark:text-slate-100">Lokasi Kami</h4>
+                        <p class="text-slate-500 text-sm mb-4">Jl. Raya Kerinci No. 123, Kota Sungaipenuh, Jambi.</p>
+                        <div class="flex gap-4">
+                            <a class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-sm">public</span>
+                            </a>
+                            <a class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all"
+                                href="#">
+                                <span class="material-symbols-outlined text-sm">mail</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 text-xs">
+                    © 2024 K2M Swalayan - Putra Gunung Group. Hak Cipta Dilindungi.
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
