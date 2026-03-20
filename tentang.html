@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -34,6 +34,18 @@
         }
 
         .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            vertical-align: middle;
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
@@ -85,9 +97,9 @@
                 <section class="@container">
                     <div
                         class="relative min-h-[450px] flex flex-col justify-center overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 shadow-2xl">
-                        <div class="absolute inset-0 z-0 bg-cover bg-center"
-                            data-alt="Modern supermarket interior with organized shelves and lighting"
-                            style='background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCifOhKAGgiD5z73rsuMFydG7PlI_XXg-vrXXCfJi_T8JUioyVO2jRNoqg3LbgAqce0jeXlLVuOv3fzYB6Za3WrrARyUxqIngwkpjkQOm4NMybi90nTpdjdFOs8qQAKlLvVZz7v8QR3eeHQ1FPBUNndH1v-2SvjeNXPJcDo5DRRn1xWGjo2vbYF2K4vbTx9pb8QdM3NB2DRvU06PryAaU8Ap628plK1jjGqOw4fCWRTHmLlq7z8NZh-7jw--7XyR6yIR5ijUAa5qok");'>
+                        <div class="absolute inset-0 z-0 bg-cover bg-center" data-img-key="about_hero"
+                            data-img-type="bg"
+                            style='background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=1600&q=80");'>
                         </div>
                         <div class="relative z-10 p-8 md:p-16 max-w-2xl">
                             <span
@@ -133,8 +145,8 @@
                         </div>
                         <img alt="Smiling owner in front of family business"
                             class="relative rounded-xl shadow-xl w-full aspect-square object-cover"
-                            data-alt="Happy business owner in a modern supermarket setting"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD40avhDKonx10TvSGmGBeH8PhhtHtk0HbkpkRO7Bm3IVjmVpSnq5WyWf4nCYxrlaCE6aHq2d5xmsjD7pk1x96oabbIyGf3dn_SGpDAmh3yIAG4uRV7UhQyv5W6CiPKBLgonADpMAoN77aF33_QWMve6AfcLyrKSjj6qv7M9gNEXAuuX-EhWX9q-Zag6xbNWc5TG8xMh8XTJw9XaYVxrxS8VG6csp_u9mBroylHe7ZfAvXkCFBD82vwU2BiDGeVF_fTrz6tPuYrPvM" />
+                            data-img-key="about_owner"
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=75" />
                     </div>
                 </section>
                 <!-- Vision & Mission -->
@@ -274,5 +286,6 @@
         </div>
     </div>
 </body>
+<script src="images-config.js"></script>
 
 </html>

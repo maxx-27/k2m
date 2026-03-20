@@ -8,9 +8,25 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            vertical-align: middle;
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -70,8 +86,8 @@
         <section class="relative h-[450px] w-full flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-r from-background-dark/80 to-transparent z-10"></div>
             <img alt="Lokasi Strategis Kerinci" class="absolute inset-0 w-full h-full object-cover"
-                data-alt="Pemandangan jalan raya utama di Kerinci dengan latar pegunungan"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHYMhWoRf7emVP7kySSocvX0sz3XV5lUrdQ8IGUAWAAYbcSW0mOvuU_2e2a59RNFBrX3u0R2Bx78fZ1skdIoRpZ5Lq2OEiWYypVD9dXXY8xyAb2XYhBA738ez6eQ7CmoaeqKTu9qs2mpFvmze1tO6brECIwFDUPFju9Ydw6_SWzM1J_cGxpXt5Rnzs_ZQbvn6UB_6v3wr94Z8C3Z60YNXNtdMSJ8yiTVfztoXoS9LGvt5U8y2QtrbG6YJW4QL6Nu-tsR2RM-S0YaE" />
+                data-img-key="facilities_hero"
+                src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=1600&q=80" />
             <div class="relative z-20 max-w-7xl mx-auto px-4 w-full">
                 <div class="max-w-2xl">
                     <span
@@ -134,8 +150,8 @@
                         <div class="mt-4 rounded-xl overflow-hidden h-64 relative group">
                             <img alt="Area Parkir"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                data-alt="Area parkir luar ruangan yang luas dan tertata rapi"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr_TWaF9NkILdJdeB3LbULHkAfj_dbF6uWzB8S725JqHaN73buG0KyaPuwcRbMbdPU_9Nkt0mohh4Ek9qmMcopKmiz9Hmu0WbBzSApZBnwtf6tlZbPb2oHT4roykIZe8JsTbVAYW6Evga-sm6JaPP7neVVuDx7_Cr3EHQr9HNZo_zVjH1rPT3ej3kFaeD4qNrwXLBoOYqSyJQ2IDxcS2lnAtzIJku59Dnw91S2kfCtJtafvbIS1mDL0L5Nr2eUvhNGqTHmJfEOBqo" />
+                                data-img-key="facilities_parking"
+                                src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&q=80" />
                             <div
                                 class="absolute bottom-4 left-4 bg-background-dark/70 backdrop-blur-md px-4 py-2 rounded-lg text-white text-sm">
                                 Pantauan CCTV 24 Jam
@@ -273,10 +289,8 @@
                         <h4 class="font-bold mb-4">Lokasi Kami</h4>
                         <div
                             class="rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 h-48">
-                            <img alt="Map location" class="w-full h-full object-cover"
-                                data-alt="Peta ilustrasi lokasi di jalur utama Kerinci"
-                                data-location="Kerinci, Indonesia"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAnG2n4daZ1nCkvxkg1U8QPjdVWhsdbZ3KD1cjWa8WqU1dgqe5Cz6NShoRWlK6t0mVxxMpOP0RZMZcgv8VcxmRbZ0lt9CoSwbYUBZ7502QBpD8gd36aZ8X-ped4syar805KUcLizS3jHcJ6Y7ZjqF4cOB-yV2B3jHk1q0ra11hYTTS9VYOGIgIUMwzqQrtPyqDffVJou_GoAzO_qSZbKmBUEGWNzqfZI4Q3SPSsS5q2Hzg0q5xUroQRTgypBgd2E-OSVQ8VZkDogU" />
+                            <img alt="Map location" class="w-full h-full object-cover" data-img-key="kontak_map"
+                                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80" />
                         </div>
                         <p class="text-xs text-slate-400 mt-4 italic text-center">
                             *Berlokasi di sebelah SPBU utama Kerinci
@@ -342,6 +356,7 @@
             </div>
         </div>
     </footer>
+    <script src="images-config.js"></script>
 </body>
 
 </html>
